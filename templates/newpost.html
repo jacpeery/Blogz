@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2 class="add">Puppy Post to the Doggy Bloggy</h2>
+<form action="/newpost" method="POST">
+    <table>
+        <tr>
+            <td><label for="blog_title">Name your Doggy Bloggy!</label></td>
+        </tr>
+        <tr>
+            <td><input type="text" name="blog_title" id="blog_title" value="{{blog_title}}"/></td>
+        </tr>
+        <tr>
+            <td class="error">{{title_error}}</td>
+        </tr>
+
+        <p></p>
+        <p></p>
+
+        <tr>
+            <td><label for="blog_content">Share your dog-ma in a puppy post!</label></td>
+        </tr>
+        
+        <tr>
+            <td colspan="2"><textarea name="blog_content" id="blog_content" wrap="hard">{{blog_content}}</textarea></td>
+        </tr>
+        
+        <tr>
+            <td class="error">{{content_error}}</td>
+        </tr>
+        
+        <tr>
+            <td><input type="submit" value="Post my dog blog!" /></td>
+        </tr>
+    </table>
+</form>
+
+{% endblock %}

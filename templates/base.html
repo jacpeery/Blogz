@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{title}}</title>
+        <style>
+            .error {
+                color:tomato;
+            }
+        </style>
+    </head>
+
+<body>
+<div id="navigation">
+
+    <ul>
+        <li> <a href="/">Doggy Bloggy</a></li>
+        <p></p>
+        <li> <a href="/newpost">Write a Puppy Post</a></li>
+    </ul>
+</div>
+
+
+<div>
+    {% block content %}
+    {% endblock %}
+</div>
+
+</body>
+</html>
