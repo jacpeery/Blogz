@@ -5,13 +5,13 @@
 <h2>Build-a-Doggy-Bloggy</h2>
 <div class="blogs">
 
-{% if blog|length == 0 %}
-    <p> No new dog blog, yet. <a href="/newpost">Write a puppy post.</a></p>
+{% if users|length == 0 %}
+    <p> Ruff. No new doggy bloggy, yet. <a href="/signup">Write a puppy post!</a></p>
 
 {% else %}
-    {% for post in blog %}
-        <h3><a href="/?id={{post.id}}">{{post.title}}</a></h3>
-        <p>{{post.content}}</p>
+    <ul id="blogs">
+    {% for user in users %}
+        <li><a href="/blog?user={{user.id}}">{{user.username}}</a></li>  
     {% endfor %}
 {% endif %}
 </div>
